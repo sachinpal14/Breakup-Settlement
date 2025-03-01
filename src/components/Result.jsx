@@ -133,7 +133,7 @@ const Result = () => {
     <motion.div 
     initial={{scale:0,opacity:0}}
    whileInView={{scale:1,opacity:1}}
-   transition={{duration:0.5,delay:0.2}}
+   transition={{duration:0.4,delay:0.2}}
     className="w-64 min-h-32 rounded shadow-xl shadow-gray-500 bg-black text-white flex flex-col items-center px-4 py-2 gap-5">
       <h1 className="text-xl text-red-500 underline font-semibold">
         Break-up Report 💔
