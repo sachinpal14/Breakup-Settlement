@@ -1,6 +1,7 @@
 import React from "react";
 import { useForm } from "../contexts/FormContext";
 import { motion } from "motion/react";
+import { p } from "motion/react-client";
 
 const Result = () => {
   const {
@@ -28,12 +29,16 @@ const Result = () => {
     ) {
       return (
         <p>
-          Chaar din ki chandni fir andheri raat , open kar phone search kar gulu gulu and use kar apna hath 💀💀
-          <h1 className="font-bold text-xl text-blue-700">Serious ni lena koi ..</h1>
+          Chaar din ki chandni fir andheri raat , open kar phone search kar gulu
+          gulu and use kar apna hath 💀💀
+          <h1 className="font-bold text-xl text-blue-700">
+            Serious ni lena koi ..
+          </h1>
         </p>
       );
     } else if (
-    (duration >12 && duration <=36) &&
+      duration > 12 &&
+      duration <= 36 &&
       stipend <= 25000 &&
       gifts <= 20 &&
       contact === "Blocked 🚫" &&
@@ -41,10 +46,11 @@ const Result = () => {
     ) {
       return (
         <p>
-         Mere baabu ne thana thaya se lekar kese ho tak sab natak tha pyaar ni, 
-         Chord kar chali gyi to kya hua dil tuta h ...
-         (____)  nahi..... 💀💀
-         <h1 className="font-bold text-xl text-gray-700">Serious ni lena koi ..</h1>
+          Mere baabu ne thana thaya se lekar kese ho tak sab natak tha pyaar ni,
+          Chord kar chali gyi to kya hua dil tuta h ... (____) nahi..... 💀💀
+          <h1 className="font-bold text-xl text-gray-700">
+            Serious ni lena koi ..
+          </h1>
         </p>
       );
     } else if (
@@ -59,7 +65,11 @@ const Result = () => {
           Mana le yrr....jaake .........kya pta kuch misunderstanding ho gyi ho.
         </p>
       );
-    } else if (duration >= 36 && reason === "On the Self Respect 😎" && (contact === "Blocked 🚫" || contact === "Unblock and Not Answering 🙄" )) {
+    } else if (
+      duration >= 36 &&
+      reason === "On the Self Respect 😎" &&
+      (contact === "Blocked 🚫" || contact === "Unblock and Not Answering 🙄")
+    ) {
       return (
         <p>
           Self respect pe aa gyi ........chord de esa ni bolunga .....mahino se
@@ -77,8 +87,10 @@ const Result = () => {
           rahi ho kahi .....😶😶
         </p>
       );
-    } else if (contact === "No Contact 😔" && (duration>=8 && duration<12)) {
-      return <p>Nashe me h kya .....Breakup chord tera shuru kab hua tha......</p>;
+    } else if (contact === "No Contact 😔" && duration >= 8 && duration < 12) {
+      return (
+        <p>Nashe me h kya .....Breakup chord tera shuru kab hua tha......</p>
+      );
     } else if (contact === "No Contact 😔" && duration <= 8) {
       return (
         <p>
@@ -87,9 +99,12 @@ const Result = () => {
         </p>
       );
     } else if (contact === "No Contact 😔" && duration > 36) {
-      return <p>NOT POSSIBLE... IMPOSSIBLE.. ANARTH .. NEVER ...Contact No. na ho NOT POSSIBLE 
-        Be Busy....
-      </p>;
+      return (
+        <p>
+          NOT POSSIBLE... IMPOSSIBLE.. ANARTH .. NEVER ...Contact No. na ho NOT
+          POSSIBLE Be Busy....
+        </p>
+      );
     } else if (contact === "No Contact 😔" && duration > 12 && duration <= 36) {
       return (
         <p>
@@ -99,26 +114,27 @@ const Result = () => {
       );
     } else if (
       contact === "Blocked 🚫" &&
-      duration >12 <= 36 &&
-      reason === "Shaadi Pressure 💍" 
-
+      duration > 12 <= 36 &&
+      reason === "Shaadi Pressure 💍"
     ) {
       return (
         <p>
-          Dekh le jaake kahi bacche na.......ghum rahe ho gali me .
-          aaye bade...  shaadi ka pressure.......wale......kat gya h tera accept kar...
+          Dekh le jaake kahi bacche na.......ghum rahe ho gali me . aaye bade...
+          shaadi ka pressure.......wale......kat gya h tera accept kar...
         </p>
       );
-    } 
-    else if (duration <= 12 && reason === "Shaadi Pressure 💍"  && (contact === "Blocked 🚫" || contact === "Unblock and Not Answering 🙄") ) {
+    } else if (
+      duration <= 12 &&
+      reason === "Shaadi Pressure 💍" &&
+      (contact === "Blocked 🚫" || contact === "Unblock and Not Answering 🙄")
+    ) {
       return (
         <p>
           Nibbe ...ho ...tum ..babu shona......or kar lo certificate mil
           jaayega..... ..nibbe samaaj se......
         </p>
       );
-    }
-    else if (
+    } else if (
       duration > 12 <= 24 &&
       stipend <= 15000 &&
       gifts <= 14 &&
@@ -126,15 +142,46 @@ const Result = () => {
       (reason === "Third Person 😡" || "Axxa insaan mil gya 😶")
     ) {
       return <p>Kat gaya tumhara ......😜. Jaha mile wahi jalao .......😏</p>;
-    } 
+    } else if (contact === "Unblock and Not Answering 🙄" && duration <= 12) {
+      return (
+        <p>
+          Dhyaan se............block bhi ho skte ho . 🙄 Kahi or man lagao
+          ......
+        </p>
+      );
+    } else if (
+      contact === "Unblock and Not Answering 🙄" &&
+      duration >= 12 &&
+      duration <= 36
+    )
+      return (
+        <p>
+          Overthinking ke shikaar .......ho Khud kr lega ...krna hoga usse to
+          ....tumhare sochne se ka hi hoga......
+        </p>
+      );
+      else if (
+      contact === "Unblock and Not Answering 🙄" &&
+    
+      duration >= 36
+    )
+      return (
+        <p>
+          Itne time sath rehne ke baad bhi .....yaha aaye to relation me ni ......vaham me ho .......😏
+        </p>
+      );
+      
   };
 
+
+
   return (
-    <motion.div 
-    initial={{scale:0,opacity:0}}
-   whileInView={{scale:1,opacity:1}}
-   transition={{duration:0.4,delay:0.2}}
-    className="w-64 min-h-32 rounded shadow-xl shadow-gray-500 bg-black text-white flex flex-col items-center px-4 py-2 gap-5">
+    <motion.div
+      initial={{ scale: 0, opacity: 0 }}
+      whileInView={{ scale: 1, opacity: 1 }}
+      transition={{ duration: 0.4, delay: 0.2 }}
+      className="w-64 min-h-32 rounded shadow-xl shadow-gray-500 bg-black text-white flex flex-col items-center px-4 py-2 gap-5"
+    >
       <h1 className="text-xl text-red-500 underline font-semibold">
         Break-up Report 💔
       </h1>
