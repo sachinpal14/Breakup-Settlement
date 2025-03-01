@@ -20,13 +20,13 @@ const App = () => {
       {warning === 0 && <Warning />}
       {warning === 1 ? check ? <Form /> : <Result /> : null}
       {warning === 2 && (
-        <div className="flex flex-col w-full  p-10  gap-4   items-center  overflow-y-scroll">
-          <h1 className="text-center text-gray-100 underline  text-6xl font-bold">
+        <div className=" flex flex-col gap-5 overflow-y-scroll py-2 px-4 md:p-10 ">
+          <h1 className="text-center text-gray-100 underline  text-3xl mt-10 md:text-6xl font-bold">
             Other Projects
           </h1>
           {warning === 2 &&
             details.map((val) => (
-              <div className="flex justify-center items-center">
+              <div className="">
                 <Another
                   title={val.name}
                   id={val.id}

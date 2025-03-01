@@ -28,12 +28,12 @@ const Forms = () => {
     initial={{opacity:0,scale:0}}
     whileInView={{opacity:1,scale:1}}
     duration={{duration:2,delay:0.4}}
-    className="bg-black shadow-2xl shadow-gray-500 rounded-2xl h-[75vh] w-[420px] px-6 py-4">
+    className="bg-black shadow-2xl m-2 shadow-gray-500  rounded-2xl md:h-[75vh] md:w-[420px] px-6 py-4">
       <form
         onSubmit={handleSubmit}
         className="px-4 py-2 flex flex-col gap-5 items-center"
       >
-        <h1 className="text-red-500 font-semibold text-4xl text-center">
+        <h1 className="text-red-500 font-semibold text-2xl md:text-4xl text-center">
           Breakup Settlement Calculator 💔
         </h1>
 
