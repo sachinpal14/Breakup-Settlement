@@ -9,7 +9,7 @@ const Another = ({title,id,link,desc,image}) => {
     initial={{x:-100, opacity :0}}
     whileInView={{x:0, opacity:1 }}
     transition={{duration:1,delay:0.2}}
-    className='w-full h-full md:w-[40%]  rounded flex items-center justify-center px-4 py-2'>
+    className='w-full md:h-full md:w-[40%]  rounded flex items-center justify-center px-4 py-2'>
       <img className='rounded h-full w-full object-center object-cover' src={image} alt="" />
     </motion.div>
     <motion.div
